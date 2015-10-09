@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: ionblaster
+  api_key: '118787311511581'
+  api_secret: uvWs7Hay6zOzQXZ-EkQPmZE6oSo
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: ionblaster
+  api_key: '118787311511581'
+  api_secret: uvWs7Hay6zOzQXZ-EkQPmZE6oSo
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: ionblaster
+  api_key: '118787311511581'
+  api_secret: uvWs7Hay6zOzQXZ-EkQPmZE6oSo
+  enhance_image_tag: true
+  static_image_support: false
