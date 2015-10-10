@@ -14,6 +14,8 @@ class PicturesController < ApplicationController
 
   def create
     @picture = Picture.create(picture_params)
+    @album = Album.all.last
+    @picture.album_id = @album.id
     if @picture.save
       # send success header
       render json: { message: "success", fileID: @picture.id }, :status => 200

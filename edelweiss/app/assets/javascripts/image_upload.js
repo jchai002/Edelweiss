@@ -14,7 +14,8 @@ $(document).ready(function(){
 		success: function(file, response){
 			// find the remove button link of the uploaded file and give it an id
 			// based of the fileID response from the server
-			
+			console.log(file)
+			console.log(response)
 
 			$(file.previewTemplate).find('.dz-remove').attr('id', response.fileID);
 			// add the dz-success class (the green tick sign)

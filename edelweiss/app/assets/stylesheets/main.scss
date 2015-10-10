@@ -72,7 +72,9 @@ $darkteal: #485C5A;
 }
 
 footer {
+  position: fixed;
   bottom:0;
+  right: 1em;
 }
 
 
@@ -128,6 +130,7 @@ i {
 
 .container {
   background-color: rgba( #666666, 0.3 );
+  margin-bottom:5em;
 }
 
 
