@@ -3,8 +3,7 @@
 <%= form_for(@video) do |f| %>
     <%=f.text_field :name, label: false, placeholder:"Enter Video Name"%>
     <%=f.text_field :url, label: false, placeholder:"Enter Video URL"%>
-    <%= f.submit %>
- 	
+    <%= f.submit 'Add Video', :class => 'button' %>
 <% end %>
 
 <%= link_to 'Back', albums_path, class: "button" %>

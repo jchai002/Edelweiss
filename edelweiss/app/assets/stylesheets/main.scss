@@ -9,6 +9,7 @@ $maroon: #A31E39;
 $darkteal: #485C5A;
 
 
+
 .content:before {
   content: "";
   position: fixed;
@@ -21,10 +22,11 @@ $darkteal: #485C5A;
   -o-background-size: cover;
   background-size: cover;
   background-repeat: no-repeat;
+  background-attachment: fixed;
   display: block;
-  background-image: url('http://666a658c624a3c03a6b2-25cda059d975d2f318c03e90bcf17c40.r92.cf1.rackcdn.com/unsplash_527bf56961712_1.JPG');
-  width: 100%;
+  background-image: url('http://static1.squarespace.com/static/555b399de4b07f48c9a8090f/t/55d23527e4b0b8b5a15b56f4/1439839527021/341.jpg');
   height: 100%;
+  width: 100%;
   
   -webkit-filter: grayscale(70%);
   -moz-filter: grayscale(70%);
@@ -34,7 +36,6 @@ $darkteal: #485C5A;
 }
 
 .content {
-  position: fixed;
   left: 0;
   right: 0;
   z-index: 0;
@@ -43,21 +44,8 @@ $darkteal: #485C5A;
 }
 
 .banner {
-	position:absolute;
 	height:200px;
 	width:100%;
- background-repeat:no-repeat;
-background-size:contain;
-background-position:center;
-	-webkit-filter: grayscale(70%);
-  -moz-filter: grayscale(70%);
-  -o-filter: grayscale(70%);
-  -ms-filter: grayscale(70%);
-  filter: grayscale(70%);
-}
-
-.banner-clear {
-  height: 20%;
 }
 
 
@@ -84,7 +72,6 @@ background-position:center;
 }
 
 footer {
-  position:fixed;
   bottom:0;
 }
 
@@ -99,17 +86,23 @@ hr {
     background-image:      -o-linear-gradient(left, #ccc, $jet, #ccc);
 }
 
-#logo-text {
-  position: relative;
-  top: 25%;
-  z-index: 1;
-  width: 100%;
-  text-align: center;
-  color: white;
-  font-family: "Quicksand";
+.menu-text {
+  line-height: 5em;
 }
 
+.logo {
+  height: 200px;
+  width:200px;
+}
 
+.top-bar h3 {
+  padding-top: 1em;
+  color:white;
+}
+
+h1 {
+  color: white
+}
 
 
 .item {
@@ -123,19 +116,18 @@ hr {
 }
 
 i {
-  color: #F7CA18;
-  text-shadow: 
-    15px 0 15px #999,
-    -15px 0 15px #999,
-    0 20px 25px #999,
-    0 -20px 25px #999;
+  color: white;
   &:hover {
-    color: #F64747;
+    color: gray;
     transition: color 2s ease 0.1s;
     text-shadow: 5px 0 5px #000;
     transition: text-shadow 0.7s ease 0.2s;
   }
 
+}
+
+.container {
+  background-color: rgba( #666666, 0.3 );
 }
 
 

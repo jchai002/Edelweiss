@@ -1,7 +1,6 @@
 $(document).ready(function(){
 	// disable auto discover
 	Dropzone.autoDiscover = false;
-	var file_id
 	// grap our upload form by its id
 	$("#new_upload").dropzone({
 		// restrict image size to a maximum 1MB
@@ -15,7 +14,7 @@ $(document).ready(function(){
 		success: function(file, response){
 			// find the remove button link of the uploaded file and give it an id
 			// based of the fileID response from the server
-			file_id = response.fileID
+			
 
 			$(file.previewTemplate).find('.dz-remove').attr('id', response.fileID);
 			// add the dz-success class (the green tick sign)

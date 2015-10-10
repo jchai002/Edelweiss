@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
  
 
-
+  root "main#index"
   resources :albums
   resources :pictures
   resources :videos

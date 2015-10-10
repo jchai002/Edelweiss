@@ -1,5 +1,8 @@
 <h1>All Pictures</h1>
-
+<a href="/pictures/new" class="button">Add More Pictures</a>
+<hr>
+<ul class="medium-block-grid-3" data-clearing>
 <% @pictures.each do |pic|%>
-<%= image_tag(pic.link)%>
+<li><a href="<%=pic.link%>"><img src="<%=pic.link.url(:medium)%>"></a></li>
 <%end%>
+</ul>
