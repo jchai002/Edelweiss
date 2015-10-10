@@ -9,11 +9,13 @@ class PicturesController < ApplicationController
   end
 
   def new
+    binding.pry
+    @album_id = params[:album_id]
     @picture = Picture.new
   end
 
   def create
-    @picture = Picture.create(picture_params)
+    @picture = Picture.create(picture_params.merge(album_id: params[:album_id]))
     if @picture.save
       # send success header
       render json: { message: "success", fileID: @picture.id }, :status => 200

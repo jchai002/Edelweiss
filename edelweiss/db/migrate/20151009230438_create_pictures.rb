@@ -3,6 +3,8 @@ class CreatePictures < ActiveRecord::Migration
     create_table :pictures do |t|
       t.string 	 :name
       t.string	 :link
+      t.references :album
+      
       t.timestamps null: false
     end
   end

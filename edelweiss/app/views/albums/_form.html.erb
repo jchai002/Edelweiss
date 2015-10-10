@@ -1,0 +1,5 @@
+<%= form_for(@albums) do |f| %>
+    <%=f.text_field :name, label: false, placeholder:"Enter Album Name"%>
+    <%= f.hidden_field :album_id, :value => @album.id %>
+    <%= f.submit %>
+<% end %>

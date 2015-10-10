@@ -1,4 +1,5 @@
 class Picture < ActiveRecord::Base
+	belongs_to :album
 	has_attached_file :link, :styles => { :medium => "300x300>",:thumb => "100x100>" }
 	
 	validates_attachment 	:link, 
