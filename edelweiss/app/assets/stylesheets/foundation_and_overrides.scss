@@ -98,12 +98,12 @@ $font-family-monospace: 'Nunito', serif;
 // $font-weight-normal: normal !default;
 // $font-weight-bold: bold !default;
 
-$header-bar-color: #f4f4f4;
-$header-logo-color: #D15271;
-$header-links-color: #5e0231;
-$main-headers-font-color: #5e0231;
+$header-bar-color: rgba( #000000, 0 );
+$header-dropdown-color: rgba( #666666, 0.3 );
+$header-links-color: #222222;
+$main-headers-font-color: #222222;
 $accent-blue-color: #3E6A81;
-$maroon-text-color: #5e0231;
+$maroon-text-color: #222222;
 $light-blue: #60C2D2;
 $darker-blue: #49A4B3;
 
@@ -115,7 +115,7 @@ $white       : #FFFFFF;
 // $silver      : #EFEFEF;
 $smoke       : #EEEEEE;
 // $gainsboro   : #DDDDDD;
-// $iron        : #CCCCCC;
+$iron        : #CCCCCC;
 // $base        : #AAAAAA;
 // $aluminum    : #999999;
 // $jumbo       : #888888;
@@ -128,7 +128,7 @@ $jet         : #222222;
 // $black       : #000000;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
+$primary-color: #777777;
 // $secondary-color: #e7e7e7;
 // $alert-color: #f04124;
 // $success-color: #43AC6A;
@@ -269,8 +269,8 @@ $paragraph-font-family: $font-family-monospace;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-// $anchor-font-color: $primary-color;
-// $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color: $primary-color;
+$anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;
@@ -1389,10 +1389,10 @@ $tabs-navigation-font-family: $body-font-family;
  $topbar-title-font-size: rem-calc(26);
  $topbar-title-font-family: "Pacifico";
  // Set the link colors and styles for top-level nav
- $topbar-link-color: $header-logo-color;
- $topbar-link-color-hover: $jet;
- $topbar-link-color-active: $jet;
- $topbar-link-color-active-hover: $jet;
+ $topbar-link-color: white;
+ $topbar-link-color-hover: $iron;
+ // $topbar-link-color-active: $steel;
+ // $topbar-link-color-active-hover: $iron;
  // $topbar-link-weight: $font-weight-normal;
  // $topbar-link-font-size: rem-calc(13);
  // $topbar-link-hover-lightness: -10%; // Darken by 10%
@@ -1402,10 +1402,10 @@ $tabs-navigation-font-family: $body-font-family;
  $topbar-link-bg-active: rgba(255,255,255,0);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: $oil;
+$topbar-dropdown-bg: $header-bar-color;
 // $topbar-dropdown-link-color: $white;
-// $topbar-dropdown-link-bg: $oil;
-// $topbar-dropdown-link-bg-hover: $oil;
+$topbar-dropdown-link-bg: $header-dropdown-color;
+$topbar-dropdown-link-bg-hover: $header-dropdown-color;
 // $topbar-dropdown-link-weight: $font-weight-normal;
 // $topbar-dropdown-toggle-size: 5px;
 // $topbar-dropdown-toggle-color: $white;
@@ -1443,8 +1443,8 @@ $topbar-link-font-family: $body-font-family;
 // $topbar-menu-link-transform: uppercase;
 // $topbar-menu-link-font-size: rem-calc(13);
 // $topbar-menu-link-weight: $font-weight-bold;
-$topbar-menu-link-color: $header-logo-color;
-$topbar-menu-icon-color: $header-logo-color;
+$topbar-menu-link-color: $smoke;
+$topbar-menu-icon-color: $smoke;
 // $topbar-menu-link-color-toggled: $jumbo;
 // $topbar-menu-icon-color-toggled: $jumbo;
 
