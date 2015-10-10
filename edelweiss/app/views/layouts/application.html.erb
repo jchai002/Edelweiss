@@ -6,9 +6,24 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+ <body>
 
-<%= yield %>
+    <div class="container">
+      <div class="header">
+      
+       <%= yield %>  
 
-</body>
+      </div>
+     
+
+ 
+
+    </div> <!-- /container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  </body>
 </html>
+
