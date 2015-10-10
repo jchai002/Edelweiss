@@ -1,2 +1,13 @@
-<h1>Albums#index</h1>
-<p>Find me in app/views/albums/index.html.erb</p>
+<h1><%=@album.name%></h1>
+<br>
+<h1>Add Pictures Here</h1>
+
+<%= form_for(@picture, html: { multipart: true, class: "dropzone",id: "new_upload"}) do |f|  %>
+  <div class="fallback">
+    <%= f.file_field :link %><br>
+    <%= f.text_field :name %>
+    <%= f.submit "Upload" %>
+  </div>
+<% end %>
+
+<br>

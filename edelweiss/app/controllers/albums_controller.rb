@@ -3,6 +3,11 @@ class AlbumsController < ApplicationController
     @albums=Album.all
   end
 
+  def show
+    @album=Album.find_by(id: params[:id])
+    @picture= Picture.new
+  end
+
   def new
     @album=Album.new
   end
@@ -10,7 +15,7 @@ class AlbumsController < ApplicationController
   def create
     @album=Album.new(album_params)
     if @album.save
-      render new_picture_path
+      redirect_to album_path(@album.id)
     end
   end
 

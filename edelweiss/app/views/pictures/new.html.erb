@@ -1,12 +1,9 @@
-<%=binding.pry%>
-
 <h1>Add Pictures Here</h1>
 
 <%= form_for(@picture, html: { multipart: true, class: "dropzone",id: "new_upload"}) do |f|  %>
   <div class="fallback">
     <%= f.file_field :link %><br>
+    <%= f.text_field :name %>
     <%= f.submit "Upload" %>
   </div>
 <% end %>
-
-<br>
