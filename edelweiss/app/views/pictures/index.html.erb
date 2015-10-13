@@ -1,14 +1,19 @@
+<% if session[:admin]%>
 <div class="admin">
 <h1>Admin Pannel</h1>
 <%= link_to 'Add More Pictures', new_picture_path, class:"button round" %>
 </div>
+<%end%>
 
 <ul class="medium-block-grid-3" data-clearing>
 	<% @pictures.each do |picture|%>
-	<li class="text-center">
-	<a href="<%=picture.link%>"><img src="<%=picture.link.url(:medium)%>"></a>
-	<br><br>
-	<%= link_to 'Delete Picture', picture, method: :delete, data: { confirm: 'Delete This Pciture?' }, class:"button round small" %>
-	</li>
+		<li class="text-center">
+		<a href="<%=picture.link%>"><img src="<%=picture.link.url(:medium)%>"></a>
+		
+		<% if session[:admin]%>
+		<br><br>
+		<%= link_to 'Delete Picture', picture, method: :delete, data: { confirm: 'Delete This Pciture?' }, class:"button round small" %>
+		<%end%>
+		</li>
 	<%end%>
 </ul>

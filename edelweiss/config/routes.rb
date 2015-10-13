@@ -5,13 +5,15 @@ Rails.application.routes.draw do
 
   get 'emailapi' =>'emailapi#index'
   post 'emailapi/subscribe' => 'emailapi#subscribe'
+  get 'admin' => 'admin#login'
+  post 'admin/authorize' => 'admin#authorize'
+  delete 'admin/logout' => 'admin#logout'
 
-  resources :albums
+
   resources :pictures
   resources :videos
   resources :musics
   resources :events
-  resources :songs
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

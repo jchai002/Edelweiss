@@ -1,0 +1,9 @@
+
+<div class="admin">
+<h1>Admin Login</h1>
+
+<%= form_tag('/admin/authorize', method: "post") do -%>
+	<%= password_field(:admin,:password, placeholder: "password") %>
+	<%= submit_tag("Login", class:"button round") %>
+<%end%>
+</div>

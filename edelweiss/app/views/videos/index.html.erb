@@ -1,15 +1,19 @@
+<% if session[:admin] %>
 <div class="admin">
 <h1>Admin Pannel</h1>
 <%= link_to 'Add More Videos', new_video_path, class:"button round" %>
 </div>
+<%end%>
   <ul class="no-bullet">
     <% @videos.each do |video| %>
       <li><h2><%= video.name%></h2></li>
        <div class="flex-video">
         <iframe src="<%=video.url%>" frameborder="0" allowfullscreen></iframe>
         </div>
+      <% if session[:admin] %>
       <li><%= link_to 'Delete Video', video, method: :delete, data: { confirm: 'Delete This Video?' }, class:"button round small" %></li>
       <%end%>
+    <%end%>
 </ul>
 <br>
 

@@ -1,15 +1,19 @@
+<% if session[:admin] %>
 <div class="admin">
 <h1>Admin Pannel</h1>
 <%= link_to 'Add More Events', new_event_path, class:"button round" %>
 </div>
+<%end%>
   <ul class="no-bullet">
     <% @events.each do |event| %>
       <li><h2><%= event.title%></h2></li>
       <li><%= image_tag(event.picture)%></li>
       <br>
       <li><%= simple_format(event.body)%></li>
+      <% if session[:admin] %>
       <li><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Delete This Event?' }, class:"button round small" %></li>
       <%end%>
+    <%end%>
 </ul>
 <br>
 

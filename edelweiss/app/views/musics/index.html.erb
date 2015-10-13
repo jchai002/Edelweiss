@@ -1,7 +1,9 @@
+<% if session[:admin]%>
 <div class="admin">
 <h1>Admin Pannel</h1>
 <%= link_to 'Add More Musics', new_music_path, class:"button round" %>
 </div>
+<%end%>
 
 <div class="music">
   <ul class="small-block-grid-1 large-block-grid-2">
@@ -9,7 +11,9 @@
      <li class="text-center">
      <%=music.code.html_safe%>
      <br>
+     <% if session[:admin]%>
       <%= link_to 'Delete Music', music, method: :delete, data: { confirm: 'Delete This Music?' }, class:"button round small" %>
+      <%end%>
       </li>
       <%end%>
    </ul>

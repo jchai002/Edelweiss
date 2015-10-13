@@ -17,9 +17,9 @@ ActiveRecord::Schema.define(version: 20151013070017) do
   enable_extension "plpgsql"
 
   create_table "admins", force: :cascade do |t|
-    t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "password_digest", null: false
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
   create_table "albums", force: :cascade do |t|
@@ -50,14 +50,6 @@ ActiveRecord::Schema.define(version: 20151013070017) do
     t.string   "link_content_type"
     t.integer  "link_file_size"
     t.datetime "link_updated_at"
-  end
-
-  create_table "songs", force: :cascade do |t|
-    t.string   "title"
-    t.string   "lyric"
-    t.integer  "album_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "videos", force: :cascade do |t|
