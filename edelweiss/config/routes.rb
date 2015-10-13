@@ -2,6 +2,10 @@ Rails.application.routes.draw do
  
 
   root "main#index"
+
+  get 'emailapi' =>'emailapi#index'
+  post 'emailapi/subscribe' => 'emailapi#subscribe'
+
   resources :albums
   resources :pictures
   resources :videos

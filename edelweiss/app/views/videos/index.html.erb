@@ -2,8 +2,6 @@
 <h1>Admin Pannel</h1>
 <%= link_to 'Add More Videos', new_video_path, class:"button round" %>
 </div>
-
-<h1>Videos</h1>
   <ul class="no-bullet">
     <% @videos.each do |video| %>
       <li><h2><%= video.name%></h2></li>

@@ -9,20 +9,30 @@
           <section class="top-bar-section hide-for-small">
              
             <ul class="right">
-              <li><a href="/musics"><h3>Music</h3></a></li>
+              <li><a href="/musics">Music</a></li>
              
-              <li><a href="/pictures"><h3>Pictures</h3></a></li>
+              <li><a href="/pictures">Pictures</a></li>
              
-              <li><a href="/videos"><h3>Videos</h3></a></li>
+              <li><a href="/videos">Videos</a></li>
              
-              <li><a href="/"><h3>Lyrics</h3></a></li>
+              <li><a href="/">Lyrics</a></li>
 
-              <li><a href="/"><h3>Events</h3></a></li>
+              <li><a href="/">Events</a></li>
+
+              <li><a href="#" data-reveal-id="subscribe">Subscribe</a></li>
          
             </ul>
           </section>
         </nav>
 
+        <div id="subscribe" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <h1>Subscribe to our News Letter</h1>
+        <%= form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
+           <%= email_field(:email,:address, placeholder: "email address") %>
+           <%= submit_tag("Sign me up!", class:"button round") %>
+           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        <% end %>
+        </div>
 
         <div class="row">
       <div class="large-12">

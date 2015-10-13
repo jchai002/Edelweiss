@@ -103,7 +103,7 @@ hr {
 }
 
 h1 {
-  color: white
+  color: $jet
 }
 
 
@@ -138,6 +138,7 @@ i {
   position: relative;
   margin: 3em;
   padding:3em;
-  background-color: rgba( #666666, 0.9 );
+  background-color: $steel;
+  border-radius: 4px;
 }
 
