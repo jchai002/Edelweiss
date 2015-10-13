@@ -1,0 +1,11 @@
+<h1>New Event</h1>
+
+<%= form_for(@event) do |f| %>
+    <%=f.text_field :title, label: false, placeholder:"Enter Event Title"%>
+    <%=f.text_field :picture, label: false, placeholder:"Enter Link To Event Picture"%>
+    <%=f.text_area :body, cols: 40, rows: 15, label: false, placeholder:"Enter Event Details"%>
+    <%= f.submit 'Add Event', :class => 'button round' %>
+<% end %>
+
+<%= link_to 'Back', albums_path, class: "button round" %>
+
