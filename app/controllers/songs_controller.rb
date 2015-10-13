@@ -1,11 +1,6 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy]
 
-  # GET /songs
-  # GET /songs.json
-  def index
-    @songs = Song.all
-  end
 
   # GET /songs/1
   # GET /songs/1.json
@@ -30,7 +25,6 @@ class SongsController < ApplicationController
     respond_to do |format|
       if @song.save
         format.html { redirect_to @song, notice: 'Song was successfully created.' }
-        format.json { render :show, status: :created, location: @song }
       end
     end
   end
@@ -41,10 +35,6 @@ class SongsController < ApplicationController
     respond_to do |format|
       if @song.update(song_params)
         format.html { redirect_to @song, notice: 'Song was successfully updated.' }
-        format.json { render :show, status: :ok, location: @song }
-      else
-        format.html { render :edit }
-        format.json { render json: @song.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -55,7 +45,6 @@ class SongsController < ApplicationController
     @song.destroy
     respond_to do |format|
       format.html { redirect_to songs_url, notice: 'Song was successfully destroyed.' }
-      format.json { head :no_content }
     end
   end
 

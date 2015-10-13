@@ -1,3 +1,4 @@
+<div class="admin">
 <h1>New Song</h1>
 
 <%= form_for(@song) do |f| %>
@@ -6,6 +7,6 @@
   <%= f.hidden_field :album_id, :value => @album.id %>
     <%= f.submit "Submit", :class=>"tiny round button" %>
 <% end %>
-
+</div>
 
 <%= link_to 'Back to Albums', albums_path %>

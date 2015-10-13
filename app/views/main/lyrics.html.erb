@@ -1,0 +1,25 @@
+<% if session[:admin]%>
+<div class="admin">
+<h1>Admin Pannel</h1>
+<%= link_to 'Edit Lyrics', albums_path, class:"button round" %>
+</div>
+<%end%>
+
+<div class="row">
+<div class="small-12 medium-6 columns">
+	<ul class="accordion" data-accordion>
+	<% @albums.all.each do |album| %>
+	  <li class="accordion-navigation">
+	    <a href="#panel<%=album.id%>"><%=album.title%></a>
+	    <div id="panel<%=album.id%>" class="content song-list">
+	    <ul class="no-bullet">
+	     <%album.songs.each do |song|%>
+	     <li><%=link_to song.title, song_path(song), :class=>"song-link"%></li>
+	     <%end%>
+	    </ul>
+	   </div>
+	  </li>
+	 <%end%>
+	</ul>
+</div>
+</div>

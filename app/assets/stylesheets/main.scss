@@ -39,32 +39,12 @@ $darkteal: #485C5A;
   left: 0;
   right: 0;
   z-index: 0;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 
 .banner {
 	height:200px;
 	width:100%;
 }
-
-
-@media only screen and (min-width: 40.063em) { 
-    .content {
-      margin-left:4em;
-      margin-right:4em;
-    }
-
-    .about,.stills,.videos,.contact{
-    padding:3em;
-  }
-} /* min-width 641px, medium screens */
-
-@media only screen and (max-width: 40em) { 
-
-}
-
-
 
 .picture {
   width:100%;
