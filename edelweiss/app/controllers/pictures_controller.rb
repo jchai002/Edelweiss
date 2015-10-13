@@ -1,4 +1,6 @@
 class PicturesController < ApplicationController
+  before_action :set_picture, only: [:show, :edit, :update, :destroy]
+
 
   def index
   	@pictures = Picture.all
@@ -27,16 +29,22 @@ class PicturesController < ApplicationController
   end
 
   def destroy
-    @picture = Picture.find(params[:id])
     if @picture.destroy    
-      render json: { message: "File deleted from server" }
-    else
-      render json: { message: @picture.errors.full_messages.join(',') }
+        respond_to do |format|
+        format.html { redirect_to pictures_url, notice: 'Picture was successfully deleted.' }
+        format.json { head :no_content }
+      end
     end
   end
 
   private
+
+  def set_picture
+    @picture = Picture.find(params[:id])
+  end
+
   def picture_params
     params.require(:picture).permit(:name,:link)
   end
+
 end

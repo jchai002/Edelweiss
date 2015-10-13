@@ -1,3 +1,3 @@
 class Album < ActiveRecord::Base
-	has_many :pictures
+	has_many :songs
 end

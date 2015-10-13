@@ -4,7 +4,11 @@
 </div>
 
 <ul class="medium-block-grid-3" data-clearing>
-<% @pictures.each do |pic|%>
-<li><a href="<%=pic.link%>"><img src="<%=pic.link.url(:medium)%>"></a></li>
-<%end%>
+	<% @pictures.each do |picture|%>
+	<li class="text-center">
+	<a href="<%=picture.link%>"><img src="<%=picture.link.url(:medium)%>"></a>
+	<br><br>
+	<%= link_to 'Delete Picture', picture, method: :delete, data: { confirm: 'Delete This Pciture?' }, class:"button round small" %>
+	</li>
+	<%end%>
 </ul>

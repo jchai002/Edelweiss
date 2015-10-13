@@ -20,6 +20,12 @@
 
     <%= render "layouts/header" %>
     <div class="container small-12 medium-10 medium-centered columns">
+    <%if notice %>
+      <div data-alert class="alert-box info radius">
+        <%= notice %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <%end%>
     <%= yield %>
     </div>
     <%= render "layouts/footer" %>
