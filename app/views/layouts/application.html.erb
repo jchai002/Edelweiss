@@ -16,7 +16,7 @@
 
 </head>
 
-<body class="content">
+<body class="<%= @home_page ? 'home' : 'content'%>">
 
     <%= render "layouts/header" %>
     <div class="container small-12 medium-10 medium-centered columns">

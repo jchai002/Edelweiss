@@ -17,6 +17,8 @@
              
               <li><a href="/events">Events</a></li>
 
+              <li><a href="/albums">Lyrics</a></li>
+
               <% if session[:admin] %>
               <li><%= link_to 'Logout', admin_logout_path, :method => :delete %></li>
               <%else%>

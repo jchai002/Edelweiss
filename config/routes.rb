@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
  
 
-  root "main#index"
+  resources :songs
+resources :albums do
+  resources :songs, shallow: true
+end
+
 
   get 'emailapi' =>'emailapi#index'
   post 'emailapi/subscribe' => 'emailapi#subscribe'

@@ -269,8 +269,8 @@ $paragraph-font-family: $font-family-monospace;
 // We use these to style anchors
 // $anchor-text-decoration: none;
 // $anchor-text-decoration-hover: none;
-$anchor-font-color: $primary-color;
-$anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
+$anchor-font-color: $white;
+$anchor-font-color-hover: scale-color($white, $lightness: -14%);
 
 // We use these to style the <hr> element
 // $hr-border-width: 1px;

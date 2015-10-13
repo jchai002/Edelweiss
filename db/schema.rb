@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151013070017) do
+ActiveRecord::Schema.define(version: 20151013201959) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -23,7 +23,7 @@ ActiveRecord::Schema.define(version: 20151013070017) do
   end
 
   create_table "albums", force: :cascade do |t|
-    t.string   "name"
+    t.string   "title"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -52,6 +52,16 @@ ActiveRecord::Schema.define(version: 20151013070017) do
     t.datetime "link_updated_at"
   end
 
+  create_table "songs", force: :cascade do |t|
+    t.string   "title"
+    t.string   "lyric"
+    t.integer  "album_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "songs", ["album_id"], name: "index_songs_on_album_id", using: :btree
+
   create_table "videos", force: :cascade do |t|
     t.string   "name"
     t.string   "url"
@@ -59,4 +69,5 @@ ActiveRecord::Schema.define(version: 20151013070017) do
     t.datetime "updated_at"
   end
 
+  add_foreign_key "songs", "albums"
 end

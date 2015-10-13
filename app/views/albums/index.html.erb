@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Albums</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Number of Song</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @albums.each do |album| %>
+      <tr>
+        <td><%= album.title %></td>
+        <td><%= album.songs.count%></td>
+        <td><%= link_to 'Album Details', album, :class=>'tiny round button' %></td>
+        <td><%= link_to 'Delete Album', album, method: :delete, data: { confirm: 'Delete This Album?' }, :class=>'tiny round button' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Album', new_album_path,:class=>'small round button' %>

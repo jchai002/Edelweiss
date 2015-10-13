@@ -1,0 +1,19 @@
+<div class="admin">
+<p>
+  <h1><strong>Title:</strong>
+  <%= @song.title %></h1>
+</p>
+
+<p>
+  <strong>Album:</strong>
+  <%= @song.album.title %>
+</p>
+
+<p>
+  <strong>Lyrics:</strong>
+  <br>
+  <%= @song.lyric %>
+</p>
+<%= link_to 'Edit', edit_song_path(@song), :class=>"small round button" %> 
+</div>
+<%= link_to 'Back to Album', album_path(@song.album)  %>
