@@ -24,7 +24,7 @@ $darkteal: #485C5A;
   background-repeat: no-repeat;
   background-attachment: fixed;
   display: block;
-  background-image: url('http://static1.squarespace.com/static/555b399de4b07f48c9a8090f/t/55d23527e4b0b8b5a15b56f4/1439839527021/341.jpg');
+  background-image: image_url('edelweiss-bg.jpg');
   height: 100%;
   width: 100%;
   
@@ -129,9 +129,15 @@ i {
 }
 
 .container {
+  padding:2em;
   background-color: rgba( #666666, 0.3 );
   margin-bottom:5em;
 }
 
-
+.admin {
+  position: relative;
+  margin: 3em;
+  padding:3em;
+  background-color: rgba( #666666, 0.9 );
+}
 

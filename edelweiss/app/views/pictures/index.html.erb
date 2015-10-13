@@ -1,6 +1,8 @@
-<h1>All Pictures</h1>
-<a href="/pictures/new" class="button">Add More Pictures</a>
-<hr>
+<div class="admin">
+<h1>Admin Pannel</h1>
+<%= link_to 'Add More Pictures', new_picture_path, class:"button round" %>
+</div>
+
 <ul class="medium-block-grid-3" data-clearing>
 <% @pictures.each do |pic|%>
 <li><a href="<%=pic.link%>"><img src="<%=pic.link.url(:medium)%>"></a></li>
