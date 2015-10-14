@@ -28,7 +28,14 @@
 <div class="small-12 medium-6 columns">
 <h1>Lyrics</h1>
 <hr>
-<div class="lyric"></div>
+<div class="lyric">
+	<%if @default_song%>
+	<h1><%= @default_song.title %></h1>
+	<p>
+	<%= @default_song.lyric %>
+	</p>
+	<%end%>
+</div>
 </div>
 
 </div>
