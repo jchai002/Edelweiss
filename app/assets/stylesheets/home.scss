@@ -1,32 +1,29 @@
-.home:before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: block;
-  background-image: image_url('edelweiss-bg.jpg');
-  height: 100%;
-  width: 100%;
-  
-  -webkit-filter: grayscale(70%);
-  -moz-filter: grayscale(70%);
-  -o-filter: grayscale(70%);
-  -ms-filter: grayscale(70%);
-  filter: grayscale(70%);
+.home-container {
+  padding:2em;
+  background-color: transparent;
+  margin-bottom:5em;
 }
+
+.title-full {
+  position: relative;
+  top:-150px;
+  font-family: "Pacifico";
+  font-size: 150pt;
+  color:white;
+}
+
+.title-mobile {
+  position: relative;
+  top:140px;
+  font-family: "Pacifico";
+  font-size: 40pt;
+  color:white;
+}
+
 
 .home {
   left: 0;
   right: 0;
   z-index: 0;
-  margin-left: 20px;
-  margin-right: 20px;
+  background-color: black;
 }

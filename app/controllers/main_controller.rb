@@ -4,6 +4,7 @@ class MainController < ApplicationController
   end 
 
   def lyrics
+  	@default_song = Song.first
   	@albums = Album.all
   end
 end

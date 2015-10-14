@@ -8,7 +8,9 @@ $footer-color: rgba( #666666, 0.3 );
 $maroon: #A31E39;
 $darkteal: #485C5A;
 
-
+.black {
+  color:white;
+}
 
 .content:before {
   content: "";

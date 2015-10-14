@@ -16,10 +16,10 @@
 
 </head>
 
-<body class="<%= @home_page ? 'home' : 'content'%>">
+<body class="<%= @home_page ? 'home': 'content'%>">
 
     <%= render "layouts/header" %>
-    <div class="container small-12 medium-10 medium-centered columns">
+    <div class="small-12 medium-10 medium-centered columns <%= @home_page ? 'home text-center' : 'home-container'%>">
     <%if notice %>
       <div data-alert class="alert-box info radius">
         <%= notice %>

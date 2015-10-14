@@ -2,11 +2,15 @@ Rails.application.routes.draw do
 
 
 root 'main#index' 
-get 'lyrics' => 'main#lyrics'
+get 'lyrics' => 'main#lyrics', as: "lyrics"
 
-resources :albums do
-  resources :songs, shallow: true
+shallow do
+     resources :albums do 
+          resources :songs
+     end
 end
+
+resources :songs
 
   get 'showlyric/:id' => 'songs#showlyric', as: "songlyric"
 
