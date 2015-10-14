@@ -1,11 +1,14 @@
 Rails.application.routes.draw do
- 
+
+
+root 'main#index' 
 get 'lyrics' => 'main#lyrics'
 
 resources :albums do
   resources :songs, shallow: true
 end
 
+  get 'showlyric/:id' => 'songs#showlyric', as: "songlyric"
 
   get 'emailapi' =>'emailapi#index'
   post 'emailapi/subscribe' => 'emailapi#subscribe'

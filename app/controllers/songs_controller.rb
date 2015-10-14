@@ -1,5 +1,5 @@
 class SongsController < ApplicationController
-  before_action :set_song, only: [:show, :edit, :update, :destroy]
+  before_action :set_song, only: [:show, :edit, :update, :destroy, :showlyric]
 
 
   # GET /songs/1
@@ -11,6 +11,9 @@ class SongsController < ApplicationController
   def new
     @song = Song.new
     @album = Album.find(params[:album_id])
+  end
+
+  def showlyrics
   end
 
   # GET /songs/1/edit
