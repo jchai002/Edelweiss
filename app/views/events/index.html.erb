@@ -5,8 +5,13 @@
       <li><%= image_tag(event.picture)%></li>
       <br>
       <li><%= simple_format(event.body)%></li>
+      
       <% if session[:admin] %>
       <li><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Delete This Event?' }, class:"button round small" %></li>
+      <%end%>
+
+      <%unless event==@events.last%>
+      <hr>
       <%end%>
     <%end%>
 </ul>
