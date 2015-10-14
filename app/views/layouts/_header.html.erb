@@ -1,7 +1,11 @@
 <nav class="top-bar" data-topbar>
           <ul class="title-area">
             <li class="name">
-              <a href="/"><%=image_tag('logo.png', class: 'logo hide-for-small')%></a>
+            <% if @home_page%>
+              <a href="/"><%=image_tag('white-logo.png', class: 'logo hide-for-small')%></a>
+            <%else%>
+              <a href="/"><%=image_tag('black-logo.png', class: 'logo hide-for-small')%></a>
+            <%end%>
             </li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
           </ul>
@@ -30,7 +34,7 @@
         </nav>
 
         <div id="subscribe" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-          <h1>Subscribe to our News Letter</h1>
+          <h1>Subscribe to our Newsletter</h1>
         <%= form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
            <%= email_field(:email,:address, placeholder: "email address") %>
            <%= submit_tag("Sign me up!", class:"button round") %>
