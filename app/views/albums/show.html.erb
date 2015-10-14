@@ -1,3 +1,4 @@
+<% if session[:admin] %>
 <div class="admin">
 <p>
   <h1><strong>Title:</strong>
@@ -29,3 +30,4 @@
 <br>
 <%= link_to 'Back to Albums', albums_path, class: "jet" %> 
 </div>
+<%end%>

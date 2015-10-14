@@ -1,10 +1,14 @@
+<% if session[:admin] %>
+<div class="admin">
 <h1>Add Pictures Here</h1>
 
 <%= form_for(@picture, html: { multipart: true, class: "dropzone",id: "new_upload"}) do |f|  %>
   <div class="fallback">
     <%= f.file_field :link %><br>
-    <%= f.submit "Upload", class:"button" %>
+    <%= f.submit "Upload", class:"tiny round button" %>
   </div>
 <% end %>
 <br>
-<%= link_to 'Back to Pictures', pictures_path, class: "button round" %>
+<%= link_to 'Back to Pictures', pictures_path, class: "jet" %>
+</div>
+<%end%>

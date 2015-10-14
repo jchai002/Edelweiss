@@ -1,3 +1,4 @@
+<% if session[:admin] %>
 <div class="admin">
 <p>
   <h1><strong>Title:</strong>
@@ -18,4 +19,4 @@
 <br>
 <%= link_to 'Back to Album', album_path(@song.album), :class=>"jet"  %>
 </div>
-
+<%end%>

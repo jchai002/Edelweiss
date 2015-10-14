@@ -1,11 +1,13 @@
+<% if session[:admin] %>
 <h1>New Music</h1>
 
 <%= form_for(@music) do |f| %>
   
   <%=f.text_field :code, label: false, placeholder:"Enter Music Embed Code"%>
 
-    <%= f.submit 'Add Music', :class => 'button round' %>
+    <%= f.submit 'Add Music', :class => 'tiny button round' %>
 <% end %>
 
-<%= link_to 'Back to Musics', musics_path, class: "button round" %>
+<%= link_to 'Back to Musics', musics_path, class: "jet" %>
 
+<%end%>

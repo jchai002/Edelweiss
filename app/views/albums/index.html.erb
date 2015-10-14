@@ -1,3 +1,4 @@
+<% if session[:admin] %>
 <div class="admin">
 <h1>All Albums</h1>
 <table>
@@ -25,5 +26,5 @@
 <br>
 <%= link_to 'Back to Lyrics', lyrics_path, class: "jet" %>
 </div>
-
+<%end%>
 

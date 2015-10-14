@@ -1,10 +1,4 @@
-<% if session[:admin] %>
-<div class="admin">
-<h1>Admin Pannel</h1>
-<%= link_to 'Add More Events', new_event_path, class:"button round" %>
-</div>
-<%end%>
-  <ul class="no-bullet">
+<ul class="no-bullet">
     <% @events.each do |event| %>
       <li><h2><%= event.title%></h2></li>
       <li><%= image_tag(event.picture)%></li>
@@ -17,3 +11,9 @@
 </ul>
 <br>
 
+<% if session[:admin] %>
+<div class="admin">
+<h1>Admin Pannel</h1>
+<%= link_to 'Add More Events', new_event_path, class:"button round" %>
+</div>
+<%end%>

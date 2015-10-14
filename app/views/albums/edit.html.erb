@@ -1,8 +1,8 @@
+<% if session[:admin] %>
 <div class="admin">
 <h1>Editing Album</h1>
-
 <%= render 'form' %>
 <br>
 </div>
-
-<%= link_to 'Back to Albums', albums_path%>
+<%= link_to 'Back to Albums', albums_path, class:'jet' %>
+<%end%>

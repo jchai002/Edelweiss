@@ -1,5 +1,7 @@
+<% if session[:admin] %>
 <h1>New Album</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', albums_path, class:"small round button" %>
+<%= link_to 'Back to Albums', albums_path, class:"jet" %>
+<%end%>
