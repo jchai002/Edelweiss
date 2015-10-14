@@ -7,6 +7,7 @@
   <%= f.hidden_field :album_id, :value => @album.id %>
     <%= f.submit "Submit", :class=>"tiny round button" %>
 <% end %>
+<br>
+<%= link_to 'Back to Albums', albums_path, :class=>"jet" %>
 </div>
 
-<%= link_to 'Back to Albums', albums_path %>

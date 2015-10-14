@@ -1,10 +1,11 @@
-<h1>Editing Song</h1>
+<div class="admin">
+	<h1>Editing Song</h1>
 
-<%= form_for(@song) do |f| %>
-    <%= f.text_field :title, placeholder: 'Enter Song Title' %>
-    <%= f.text_area :lyric, placeholder: 'Enter Song Lyrics', cols: 40, rows: 15 %>
-    <%= f.submit "Submit", :class=>"tiny round button" %>
-<% end %>
+	<%= form_for(@song) do |f| %>
+	    <%= f.text_field :title, placeholder: 'Enter Song Title' %>
+	    <%= f.text_area :lyric, placeholder: 'Enter Song Lyrics', cols: 40, rows: 15 %>
+	    <%= f.submit "Submit", :class=>"tiny round button" %>
+	<% end %>
 
-<%= link_to 'Back to Song', @song %> 
-
+	<%= link_to 'Back to Song', @song, class: "jet" %> 
+</div>

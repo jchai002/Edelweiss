@@ -5,11 +5,27 @@
   <%= link_to 'Edit Album Name', edit_album_path, :class=>'small round button' %>
   <h3>Song list</h3>
   <hr>
-  <%@album.songs.each do|song| %>
-  	<p><%=song.title %></p>
-  <%end%>
-</p>
+
+  <table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <%@album.songs.all.each do|song| %>
+      <tr>
+        <td><%=song.title %></td>
+        <td><%= link_to 'Song Details', song, :class=>'tiny round button' %></td>
+        <td><%= link_to 'Delete Song', song, method: :delete, data: { confirm: 'Delete This Song?' }, :class=>'tiny round button' %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
 <%= link_to "Add a Song", new_album_song_path(@album), :class=>"small round button" %>
 <br>
+<%= link_to 'Back to Albums', albums_path, class: "jet" %> 
 </div>
-<%= link_to 'Back to Albums', albums_path %>

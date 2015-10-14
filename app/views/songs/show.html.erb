@@ -12,8 +12,10 @@
 <p>
   <strong>Lyrics:</strong>
   <br>
-  <%= @song.lyric %>
+  <%= simple_format(@song.lyric) %>
 </p>
-<%= link_to 'Edit', edit_song_path(@song), :class=>"small round button" %> 
+<%= link_to 'Edit Song', edit_song_path(@song), :class=>"small round button" %>
+<br>
+<%= link_to 'Back to Album', album_path(@song.album), :class=>"jet"  %>
 </div>
-<%= link_to 'Back to Album', album_path(@song.album)  %>
+

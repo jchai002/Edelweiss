@@ -1,7 +1,8 @@
 class SongsController < ApplicationController
   before_action :set_song, only: [:show, :edit, :update, :destroy, :showlyric]
 
-
+  def index
+  end
   # GET /songs/1
   # GET /songs/1.json
   def show
@@ -47,7 +48,7 @@ class SongsController < ApplicationController
   def destroy
     @song.destroy
     respond_to do |format|
-      format.html { redirect_to songs_url, notice: 'Song was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Song was successfully destroyed.' }
     end
   end
 

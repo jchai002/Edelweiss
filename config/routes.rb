@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+  resources :testings
 root 'main#index' 
 get 'lyrics' => 'main#lyrics', as: "lyrics"
 
