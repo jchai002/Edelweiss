@@ -16,6 +16,26 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
       end
   	end
 
+  def edit
+  end
+
+  def update
+    respond_to do |format|
+      if @event.update(event_params)
+        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+      end
+    end
+  end
+
+  def destroy
+    if @event.destroy    
+        respond_to do |format|
+        format.html { redirect_to events_url, notice: 'Event was successfully deleted.' }
+        format.json { head :no_content }
+      end
+    end
+  end
+
 private
 	# Use callbacks to share common setup or constraints between actions.
 	def set_event

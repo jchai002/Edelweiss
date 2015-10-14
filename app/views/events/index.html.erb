@@ -2,11 +2,14 @@
 <ul class="no-bullet">
     <% @events.each do |event| %>
       <li><h2><%= event.title%></h2></li>
+      <li><h4><%= event.updated_at.strftime('%v')%></h4></li>
       <li><%= image_tag(event.picture)%></li>
       <br>
       <li><%= simple_format(event.body)%></li>
-      
+
       <% if session[:admin] %>
+      <%= link_to 'Edit Event', edit_event_path(event), :class=>'small round button' %>
+
       <li><%= link_to 'Delete Event', event, method: :delete, data: { confirm: 'Delete This Event?' }, class:"button round small" %></li>
       <%end%>
 
