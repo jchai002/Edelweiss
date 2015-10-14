@@ -1,3 +1,4 @@
+<div class="lyric">
 <ul class="no-bullet">
     <% @events.each do |event| %>
       <li><h2><%= event.title%></h2></li>
@@ -9,6 +10,7 @@
       <%end%>
     <%end%>
 </ul>
+</div>
 <br>
 
 <% if session[:admin] %>

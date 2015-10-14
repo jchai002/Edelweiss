@@ -74,3 +74,13 @@ Whoahhh
 Sha-sha-shorty, shorty
 Yeah yeah yeahhh")
 
+Event.create({title:"Music Festival Tips" ,picture: "http://i.onionstatic.com/onion/1561/3/original/1920.jpg" ,body:
+"Only take ecstasy with people you've known for part of an afternoon or longer.
+Lines to the portable toilets can be unbearably long. Rig a makeshift chemical toilet in your cargo shorts using an adult diaper and formaldehyde.
+For the band's sake, it's best to be within the first 15 rows if you'd like to flash your rack.
+Get on a security guard's good side by complimenting him on the way he's standing there like a total asshole.
+Don't be afraid to be the screaming shirtless dude in a great big funny hat. Someone always buys that guy a hot dog.
+If at all disoriented, yell, 'WOOOO!'' until you feel well again.
+The acceptable time at which a festivalgoer may sit down is after five hours if he or she is 32 years old or over, or after eight hours if he or she is between 24 and 31. There is no acceptable sit-down time for festivalgoers ages 24 and younger.
+3XL poncho will allow you to make a few bucks renting out space during storms.
+Remember, a positive festival experience is as simple as urinating into a jug, fiercely guarding against frottage amid the dense crowds, and staying awake for 72 hours straight to make sure people don't steal your shit."})
