@@ -28,6 +28,8 @@ gem "paperclip", "~> 4.1"
 gem 'foundation-rails', '~> 5.5.1.2'
 
 gem 'foundation-icons-sass-rails'
+
+gem 'newrelic_rpm'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
