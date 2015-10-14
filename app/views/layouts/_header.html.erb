@@ -23,6 +23,8 @@
 
               <li><a href="/lyrics" style="<%="color:white;" if @home_page %>">Lyrics</a></li>
 
+              <li><a href="http://www.edelweissofficial.bigcartel.com" style="<%="color:white;" if @home_page %>">Shop</a></li>
+
               <% if session[:admin] %>
               <li><%= link_to 'Logout', admin_logout_path, :method => :delete, :style => "color:white;"  %></li>
               <%else%>
