@@ -25,7 +25,7 @@
 	<%if @default_song%>
 	<h1><%= @default_song.title %></h1>
 	<p>
-	<%= @default_song.lyric %>
+	<%= simple_format(@default_song.lyric) %>
 	</p>
 	<%end%>
 </div>
