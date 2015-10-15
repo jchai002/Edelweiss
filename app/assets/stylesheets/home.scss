@@ -4,12 +4,9 @@
   margin-bottom:5em;
 }
 
-.title-full {
-  position: relative;
-  top:-120px;
-  font-family: "Pacifico";
-  font-size: 150pt;
-  color:white;
+img.title-full {
+  height: 350px;
+  widows: 350px;
 }
 
 .title-mobile {
@@ -50,4 +47,9 @@
   left: 0;
   right: 0;
   z-index: 0;
+}
+
+.banner-home {
+  height:90px;
+  width:100%;
 }
