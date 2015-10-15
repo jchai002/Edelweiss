@@ -1,1 +1,45 @@
-<%=image_tag('white-logo.png', class: 'title-full')%>
+<div class="navigation">
+<ul>
+ <li><a href="/musics">
+    Music
+  </a></li>
+  <li><a href="/pictures">
+    Pictures
+  </a></li>
+  <li><a href="/videos">
+    Videos
+  </a></li>
+  <li><a href="/events">
+    Events
+  </a></li>
+  <li><a href="/lyrics">
+    Lyrics
+  </a></li>
+  <li><a href="http://www.edelweissofficial.bigcartel.com">
+    Shop
+  </a></li>
+  <% if session[:admin] %>
+	<li><a rel="nofollow" data-method="delete" href="/admin/logout">
+		Logout
+	</a></li>
+  <%else%>
+  <li><a href="#" data-reveal-id="subscribe">
+    Subscribe
+   </a></li>
+  <%end%>
+
+</ul>
+</div>
+
+<div id="subscribe" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
+          <h1>Subscribe to our Newsletter</h1>
+        <%= form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
+           <%= email_field(:email,:address, placeholder: "email address") %>
+           <%= submit_tag("Sign me up!", class:"button round") %>
+           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+        <% end %>
+</div>
+
+
+          
+        
