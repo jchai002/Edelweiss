@@ -1,0 +1,20 @@
+<% if session[:admin] %>
+<div class="admin">
+<h1>Admin Pannel</h1>
+<hr>
+<h4>Hello Edelweiss musician! You can add more content here :D</h4>
+<br>
+<%= link_to 'Add More announcements', new_announcement_path, class:"button round" %>
+<br>
+<%= link_to 'Add More Musics', new_music_path, class:"button round" %>
+<br>
+<%= link_to 'Add More Pictures', new_picture_path, class:"button round" %>
+<br>
+<%= link_to 'Add More Videos', new_video_path, class:"button round" %>
+<br>
+<%= link_to 'Add More Lyrics', albums_path, class:"button round" %>
+<br>
+<%= link_to 'Add More Events', new_event_path, class:"button round" %>
+<br>
+</div>
+<%end%>

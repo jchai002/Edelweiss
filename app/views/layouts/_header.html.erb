@@ -1,8 +1,11 @@
-<% unless @home_page%>
 <nav class="top-bar" data-topbar>
           <ul class="title-area">
             <li class="name">
+              <%if @home_page%>
+              <a href="/"><%=image_tag('white-logo.png', class: 'logo hide-for-small')%></a>
+              <%else%>
               <a href="/"><%=image_tag('black-logo.png', class: 'logo hide-for-small')%></a>
+              <%end%>
             </li>
             <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
           </ul>
@@ -10,22 +13,22 @@
           <section class="top-bar-section">
              
             <ul class="right">
-              <li><a href="/musics">Music</a></li>
+              <li><a href="/musics" style="<%='color:white' if @home_page%>">Music</a></li>
              
-              <li><a href="/pictures">Pictures</a></li>
+              <li><a href="/pictures" style="<%='color:white' if @home_page%>">Pictures</a></li>
              
-              <li><a href="/videos">Videos</a></li>
+              <li><a href="/videos" style="<%='color:white' if @home_page%>">Videos</a></li>
              
-              <li><a href="/events">Events</a></li>
+              <li><a href="/events" style="<%='color:white' if @home_page%>">Events</a></li>
 
-              <li><a href="/lyrics">Lyrics</a></li>
-
-              <li><a href="http://www.edelweissofficial.bigcartel.com">Shop</a></li>
+              <li><a href="/lyrics" style="<%='color:white' if @home_page%>">Lyrics</a></li>
 
               <% if session[:admin] %>
-              <li><%= link_to 'Logout', admin_logout_path, :method => :delete %></li>
+              <li><%= link_to 'Admin', admin_panel_path, style:'color:white'%></li>
+              <li><%= link_to 'Logout', admin_logout_path, :method => :delete, style:'color:white'%></li>
               <%else%>
-              <li><a href="#" data-reveal-id="subscribe">Subscribe</a></li>
+              <li><a href="http://www.edelweissofficial.bigcartel.com" style="<%='color:white' if @home_page%>">Shop</a></li>
+              <li><a href="#" data-reveal-id="subscribe" style="<%='color:white' if @home_page%>">Subscribe</a></li>
               <%end%>
          
             </ul>
@@ -46,4 +49,3 @@
         <div class="banner hide-for-small"></div>
       </div>
     </div>
-<%end%>

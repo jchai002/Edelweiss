@@ -17,9 +17,20 @@
 </head>
 
 <body class="<%= @home_page ? 'home': 'content'%>">
+<%if @home_page%>
+  <ul class="cb-slideshow no-bullet">
+    <li><span>Image 01</span></li>
+    <li><span>Image 02</span></li>
+    <li><span>Image 03</span></li>
+    <li><span>Image 04</span></li>
+    <li><span>Image 05</span></li>
+    <li><span>Image 06</span></li>
+</ul>
+<%end%>
+
 
     <%= render "layouts/header" %>
-    <div class="<%= @home_page ? 'home-container' : 'container small-12 medium-10 medium-centered columns'%>">
+    <div class="container small-12 medium-10 medium-centered columns">
     <%if notice %>
       <div data-alert class="alert-box info radius">
         <%= notice %>

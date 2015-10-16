@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  resources :testings
+
 root 'main#index' 
 get 'lyrics' => 'main#lyrics', as: "lyrics"
 
@@ -17,6 +17,7 @@ resources :songs
 
   get 'emailapi' =>'emailapi#index'
   post 'emailapi/subscribe' => 'emailapi#subscribe'
+  get 'adminpanel' => 'admin#panel', as: "admin_panel"
   get 'admin' => 'admin#login'
   post 'admin/authorize' => 'admin#authorize'
   delete 'admin/logout' => 'admin#logout'
@@ -24,8 +25,9 @@ resources :songs
 
   resources :pictures
   resources :videos
-  resources :musics
+  resources :musics 
   resources :events
+  resources :announcements
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,4 +1,7 @@
 class AdminController < ApplicationController
+	def panel
+	end
+
 	def login
 	 @admin= Admin.new
 	end

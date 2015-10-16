@@ -1,87 +1,26 @@
-<div class="navigation hide-for-small">
-<ul>
- <li><a href="/musics">
-    Music
-  </a></li>
-  <li><a href="/pictures">
-    Pictures
-  </a></li>
-  <li><a href="/videos">
-    Videos
-  </a></li>
-  <li><a href="/events">
-    Events
-  </a></li>
-  <li><a href="/lyrics">
-    Lyrics
-  </a></li>
-  <li><a href="http://www.edelweissofficial.bigcartel.com">
-    Shop
-  </a></li>
-  <% if session[:admin] %>
-	<li><a rel="nofollow" data-method="delete" href="/admin/logout">
-		Logout
-	</a></li>
-  <%else%>
-  <li><a href="#" data-reveal-id="subscribe">
-    Subscribe
-   </a></li>
-  <%end%>
-
+<ul class="no-bullet">
+    <% @announcements.each do |announcement| %>
+    <div class="row">
+    <div class="small-12 large-6 columns">
+    <li><%= image_tag(announcement.picture)%></li>
+    </div>
+    <div class="small-12 large-6 columns lyric">
+      <li><h2><%= announcement.title%></h2></li>
+      <li><h5><%= announcement.updated_at.strftime('%v')%></h5></li>
+      <br>
+      <li><%= simple_format(announcement.body)%></li>
+    </div>
+    <div class="small-12 columns">
+    <br>
+      <% if session[:admin] %>
+      <li><%= link_to 'Edit announcement', edit_announcement_path(announcement), :class=>'small round button' %></li>
+      <li><%= link_to 'Delete announcement', announcement, method: :delete, data: { confirm: 'Delete This Announcement?' }, class:"button round small" %></li>
+      <%end%>
+    </div>
+      <%unless announcement==@announcements.last%>
+      <hr>
+      <%end%>
+    </div>
+    <%end%>
 </ul>
 </div>
-
-<div id="subscribe" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-          <h1>Subscribe to our Newsletter</h1>
-        <%= form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
-           <%= email_field(:email,:address, placeholder: "email address") %>
-           <%= submit_tag("Sign me up!", class:"button round") %>
-           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-        <% end %>
-</div>
-
-<div class="show-for-small">
-<ul class="no-bullet mobile-nav">
- <li><a href="/musics">
-    Music
-  </a></li>
-  <li><a href="/pictures">
-    Pictures
-  </a></li>
-  <li><a href="/videos">
-    Videos
-  </a></li>
-  <li><a href="/events">
-    Events
-  </a></li>
-  <li><a href="/lyrics">
-    Lyrics
-  </a></li>
-  <li><a href="http://www.edelweissofficial.bigcartel.com">
-    Shop
-  </a></li>
-  <% if session[:admin] %>
-	<li><a rel="nofollow" data-method="delete" href="/admin/logout">
-		Logout
-	</a></li>
-  <%else%>
-  <li><a href="#" data-reveal-id="subscribe">
-    Subscribe
-   </a></li>
-  <%end%>
-
-</ul>
-</div>
-
-<div id="subscribe" class="reveal-modal" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-          <h1>Subscribe to our Newsletter</h1>
-        <%= form_tag('/emailapi/subscribe', method: "post", id: "subscribe", remote: "true") do -%>
-           <%= email_field(:email,:address, placeholder: "email address") %>
-           <%= submit_tag("Sign me up!", class:"button round") %>
-           <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-        <% end %>
-</div>
-
-
-          
-        

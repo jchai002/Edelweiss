@@ -1,0 +1,29 @@
+<div class="lyric">
+<ul class="no-bullet">
+    <% @annoncements.each do |annoncement| %>
+      <li><h2><%= annoncement.title%></h2></li>
+      <li><h4><%= annoncement.updated_at.strftime('%v')%></h4></li>
+      <li><%= image_tag(annoncement.picture)%></li>
+      <br>
+      <li><%= simple_format(annoncement.body)%></li>
+
+      <% if session[:admin] %>
+      <%= link_to 'Edit Annoncement', edit_annoncement_path(annoncement), :class=>'small round button' %>
+
+      <li><%= link_to 'Delete Annoncement', annoncement, method: :delete, data: { confirm: 'Delete This Annoncement?' }, class:"button round small" %></li>
+      <%end%>
+
+      <%unless annoncement==@annoncements.last%>
+      <hr>
+      <%end%>
+    <%end%>
+</ul>
+</div>
+<br>
+
+<% if session[:admin] %>
+<div class="admin">
+<h1>Admin Pannel</h1>
+<%= link_to 'Add More annoncements', new_annoncement_path, class:"button round" %>
+</div>
+<%end%>

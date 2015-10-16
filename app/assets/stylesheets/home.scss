@@ -27,37 +27,6 @@
 }
 
 
-.home:before {
-  content: "";
-  position: fixed;
-  left: 0;
-  right: 0;
-  z-index: -1;
-  
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  display: block;
-  background-image: image_url('home.jpg');
-  height: 100%;
-  width: 100%;
-  
-  -webkit-filter: grayscale(70%);
-  -moz-filter: grayscale(70%);
-  -o-filter: grayscale(70%);
-  -ms-filter: grayscale(70%);
-  filter: grayscale(70%);
-}
-
-.home {
-  left: 0;
-  right: 0;
-  z-index: 0;
-}
-
 .banner-home {
   height:90px;
   width:100%;
