@@ -1,10 +1,6 @@
 class AnnouncementsController < ApplicationController
 before_action :set_announcement, only: [:show, :edit, :update, :destroy]
 
-	def index
-		@announcements= Announcement.all
-	end
-
 	def new
 		@announcement= Announcement.new
 	end

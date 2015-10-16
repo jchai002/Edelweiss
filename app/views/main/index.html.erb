@@ -23,4 +23,10 @@
     </div>
     <%end%>
 </ul>
+
+<% if session[:admin]%>
+<div class="admin">
+<h1>Admin Pannel</h1>
+<%= link_to 'Add More Announcements', new_announcement_path, class:"button round" %>
 </div>
+<%end%>

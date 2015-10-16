@@ -27,7 +27,7 @@ resources :songs
   resources :videos, only: [:index, :new, :create, :destroy]
   resources :musics, only: [:index, :new, :create, :destroy]
   resources :events
-  resources :announcements
+  resources :announcements, only: [:new, :create, :destroy, :edit, :update]
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
