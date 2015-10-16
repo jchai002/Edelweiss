@@ -23,9 +23,9 @@ resources :songs
   delete 'admin/logout' => 'admin#logout'
 
 
-  resources :pictures
-  resources :videos
-  resources :musics 
+  resources :pictures, only: [:index, :new, :create, :destroy]
+  resources :videos, only: [:index, :new, :create, :destroy]
+  resources :musics, only: [:index, :new, :create, :destroy]
   resources :events
   resources :announcements
   # The priority is based upon order of creation: first created -> highest priority.
