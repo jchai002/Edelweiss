@@ -1,5 +1,10 @@
 Admin.create(password: "nobleandwhite")
 
+Announcement.create({title:"Music Festival Tips" ,picture: "https://f1.bcbits.com/img/a3002440918_16.jpg" ,body: "released September 13, 2011 
+Produced by Jeremy Sklarsky at Threshold Studios NYC 
+Contact: EdelweissOfficial@gmail.com
+tags: alternative indie rock math pop post-punk revival Philadelphia"})
+
 Video.create({name: 'A Sound From Pennsylvania', url: 'https://www.youtube.com/embed/rx1y8ScMWp0'})
 
 Music.create(code: '<iframe style="border: 0; width: 350px; height: 470px;" src="https://bandcamp.com/EmbeddedPlayer/album=1994609732/size=large/bgcol=ffffff/linkcol=0687f5/tracklist=false/transparent=true/" seamless><a href="http://edelweissofficial.bandcamp.com/album/pre-columbians">Pre-Columbians by Edelweiss</a></iframe>')
