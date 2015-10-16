@@ -1,6 +1,6 @@
 Admin.create(password: "nobleandwhite")
 
-Announcement.create({title:"Music Festival Tips" ,picture: "https://f1.bcbits.com/img/a3002440918_16.jpg" ,body: "released September 13, 2011 
+Announcement.create({title:"NEW EP RELEASE" ,picture: "https://f1.bcbits.com/img/a3002440918_16.jpg" ,body: "released September 13, 2011 
 Produced by Jeremy Sklarsky at Threshold Studios NYC 
 Contact: EdelweissOfficial@gmail.com
 tags: alternative indie rock math pop post-punk revival Philadelphia"})
