@@ -3,7 +3,6 @@ class CreateAnnouncements < ActiveRecord::Migration
     create_table :announcements do |t|
       t.string 	 :title
       t.string	 :body
-      t.string 	 :picture
 
       t.timestamps null: false
     end
