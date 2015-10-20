@@ -22,7 +22,7 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to events_path, notice: 'Event was successfully updated.' }
       end
     end
   end

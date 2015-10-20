@@ -3,7 +3,8 @@
 <h1>New Event</h1>
 <%= form_for(@event) do |f| %>
     <%=f.text_field :title, label: false, placeholder:@event.title%>
-    <%=f.text_field :picture, label: false, placeholder:@event.picture%>
+    <%= f.label "Upload Picture:" %>
+    <%=f.file_field :picture%>
     <%=f.text_area :body, cols: 40, rows: 15, label: false, placeholder:@event.body%>
     <%= f.submit 'Edit Event', :class => 'tiny button round' %>
 <% end %>
