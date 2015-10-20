@@ -1,7 +1,7 @@
 class MainController < ApplicationController
   def index
   	@home_page = true
-  	@announcements= Announcement.all
+  	@announcements= Announcement.order('created_at')
   end 
 
   def lyrics

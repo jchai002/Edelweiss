@@ -3,7 +3,7 @@ class MusicsController < ApplicationController
   # GET /musics
   # GET /musics.json
   def index
-    @musics = Music.all
+    @musics = Music.order('created_at')
   end
 
   # GET /musics/new
