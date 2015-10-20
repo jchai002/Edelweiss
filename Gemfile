@@ -25,6 +25,8 @@ gem 'bcrypt', '~> 3.1.7'
 
 gem "paperclip", "~> 4.1"
 
+gem 'aws-sdk'
+
 gem 'foundation-rails', '~> 5.5.1.2'
 
 gem 'foundation-icons-sass-rails'

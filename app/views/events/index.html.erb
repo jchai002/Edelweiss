@@ -3,7 +3,7 @@
     <% @events.each do |event| %>
       <li><h2><%= event.title%></h2></li>
       <li><h5><%= event.updated_at.strftime('%v')%></h5></li>
-      <li><%= image_tag(event.picture)%></li>
+      <li><%= image_tag(event.picture.url)%></li>
       <br>
       <li><%= simple_format(event.body)%></li>
 

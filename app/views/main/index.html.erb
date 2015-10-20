@@ -2,7 +2,7 @@
     <% @announcements.each do |announcement| %>
     <div class="row">
     <div class="small-12 large-6 columns">
-    <li><%= image_tag(announcement.picture)%></li>
+    <li><%= image_tag(announcement.picture.url)%></li>
     </div>
     <div class="small-12 large-6 columns lyric">
       <li><h2><%= announcement.title%></h2></li>

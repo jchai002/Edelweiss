@@ -1,7 +1,7 @@
 <% if session[:admin] %>
 <div class="admin">
 <h1>Edit Announcement</h1>
-<%= form_for(@announcement) do |f| %>
+<%= form_for(@announcement,multipart: true) do |f| %>
     <%=f.text_field :title, label: false, placeholder:@announcement.title%>
     <%= f.label "Upload Picture:" %>
     <%=f.file_field :picture%>
