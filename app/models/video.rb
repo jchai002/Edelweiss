@@ -7,6 +7,7 @@ class Video < ActiveRecord::Base
         },
         :thumb => { :geometry => "160x120", :format => 'jpeg', :time => 10}
     }, :processors => [:transcoder]
+    validates_attachment_content_type :upload, :content_type => /\Avideo\/.*\Z/
 
 	def convert_to_embed_url
 		if self.url.include?('youtube')

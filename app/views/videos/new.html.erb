@@ -1,10 +1,10 @@
 <% if session[:admin] %>
 <div class="admin">
 <h1>New Video</h1>
-<%= form_for(@video) do |f| %>
+<%= form_for(@video,multipart: true) do |f| %>
     <%=f.text_field :name, label: false, placeholder:"Enter Video Name"%>
     <%= f.label "Upload Video:" %>
-     <%=f.file_field :video%>
+     <%=f.file_field :upload%>
 
      <%= f.label "Or" %>
 

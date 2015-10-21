@@ -1,7 +1,7 @@
 <ul class="no-bullet">
     <% @videos.each do |video| %>
       <li><h2><%= video.name%></h2></li>
-      <%if video.upload%>
+      <%if video.upload_file_name%>
       <%= video_tag video.upload.url, controls: true, style: "max-width: 100%;" %>
       <%else%>
        <div class="flex-video">
