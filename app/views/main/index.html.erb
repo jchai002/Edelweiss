@@ -2,36 +2,30 @@
     <% @announcements.each do |announcement| %>
     <div class="row">
     
-    <div class="small-12 columns">
+    <div class="small-12 large-6 columns announcement">
       <li><h2 class="home-text"><%= announcement.title%></h2></li>
       <li><h5 class="home-text"><%= announcement.updated_at.strftime('%v')%></h5></li>
       <br>
       <li class="home-text"><%= simple_format(announcement.body)%></li>
+      </div>
+      <div class="small-12 large-6 columns">
+      <li><%= image_tag(announcement.picture.url)%></li>
+      </div>
 
     <% if announcement.video %>
-    <div class="small-12 large-6 columns">
+    <div class="small-12 columns">
+     <br>
     <li><%= video_tag announcement.video.url, controls: true, style: "max-width: 100%;" %></li>
     </div>
     <%end%>
-
-    <% if announcement.picture%>
-    <div class="small-12 large-6 columns">
-    <li><%= image_tag(announcement.picture.url)%></li>
-    </div>
-    <%end%>
-
-    </div>
-
- 
    
-    </div>
-   
-    <br>
       <% if session[:admin] %>
+      <div class="small-12 columns">
+      <br>
       <li><%= link_to 'Edit announcement', edit_announcement_path(announcement), :class=>'small round button' %></li>
       <li><%= link_to 'Delete announcement', announcement, method: :delete, data: { confirm: 'Delete This Announcement?' }, class:"button round small" %></li>
+      </div>
       <%end%>
-    </div>
       <%unless announcement==@announcements.last%>
       <hr>
       <%end%>
