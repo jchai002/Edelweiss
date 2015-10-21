@@ -10,4 +10,6 @@ class Announcement < ActiveRecord::Base
         },
         :thumb => { :geometry => "160x120", :format => 'jpeg', :time => 10}
     }, :processors => [:transcoder]
+    validates_attachment_content_type :video, :content_type => /\Avideo\/.*\Z/
+
 end
