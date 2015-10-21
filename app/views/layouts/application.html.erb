@@ -41,6 +41,13 @@
         <a href="#" class="close">&times;</a>
       </div>
     <%end%>
+
+    <%if flash[:login_error] %>
+      <div data-alert class="alert-box alert radius">
+        <%= flash[:login_error] %>
+        <a href="#" class="close">&times;</a>
+      </div>
+    <%end%>
     <%= yield %>
     </div>
     <%= render "layouts/footer" %>

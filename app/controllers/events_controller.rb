@@ -22,7 +22,7 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to events_path, notice: 'Event was successfully updated.' }
+        format.html { redirect_to events_path, notice: 'Master Jerry Says: Event was successfully updated.' }
       end
     end
   end
@@ -30,7 +30,7 @@ before_action :set_event, only: [:show, :edit, :update, :destroy]
   def destroy
     if @event.destroy    
         respond_to do |format|
-        format.html { redirect_to events_url, notice: 'Event was successfully deleted.' }
+        format.html { redirect_to events_url, notice: 'Master Jerry Says: Event was successfully deleted.' }
         format.json { head :no_content }
       end
     end

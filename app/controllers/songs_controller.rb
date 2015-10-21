@@ -28,7 +28,7 @@ class SongsController < ApplicationController
     @song = Song.new(song_params.merge(album_id: params[:song][:album_id]))
     respond_to do |format|
       if @song.save
-        format.html { redirect_to @song, notice: 'Song was successfully created.' }
+        format.html { redirect_to @song, notice: 'Master Jerry Says: Song was successfully created.' }
       end
     end
   end

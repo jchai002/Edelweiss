@@ -10,10 +10,11 @@ class AdminController < ApplicationController
 		admin = Admin.first
 		if  admin.authenticate(params[:admin][:password])
 	      session[:admin] = admin
+	      redirect_to root_url
 	    else
-	      flash[:login_error] = "Incorrect password"
+	      flash[:login_error] = "Master Jerry Says: Incorrect Password"
+	      redirect_to :back
 	    end
-	    redirect_to root_url
 	end
 
 	def logout

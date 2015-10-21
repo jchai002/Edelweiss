@@ -18,7 +18,7 @@ before_action :set_announcement, only: [:show, :edit, :update, :destroy]
   def update
     respond_to do |format|
       if @announcement.update(announcement_params)
-        format.html { redirect_to root_path, notice: 'announcement was successfully updated.' }
+        format.html { redirect_to root_path, notice: 'Master Jerry Says: Announcement was successfully updated.' }
       end
     end
   end
@@ -26,7 +26,7 @@ before_action :set_announcement, only: [:show, :edit, :update, :destroy]
   def destroy
     if @announcement.destroy    
         respond_to do |format|
-        format.html { redirect_to root_url, notice: 'announcement was successfully deleted.' }
+        format.html { redirect_to root_url, notice: 'Master Jerry Says: Announcement was successfully deleted.' }
         format.json { head :no_content }
       end
     end

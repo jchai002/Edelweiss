@@ -29,7 +29,7 @@ class PicturesController < ApplicationController
   def destroy
     if @picture.destroy    
         respond_to do |format|
-        format.html { redirect_to pictures_url, notice: 'Picture was successfully deleted.' }
+        format.html { redirect_to pictures_url, notice: 'Master Jerry Says: Picture was successfully deleted.' }
         format.json { head :no_content }
       end
     end

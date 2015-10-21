@@ -29,7 +29,7 @@ class AlbumsController < ApplicationController
 
     respond_to do |format|
       if @album.save
-        format.html { redirect_to @album, notice: 'Album was successfully created.' }
+        format.html { redirect_to @album, notice: 'Master Jerry Says: Album was successfully created.' }
       end
     end
   end
