@@ -1,9 +1,14 @@
 <ul class="no-bullet">
     <% @videos.each do |video| %>
       <li><h2><%= video.name%></h2></li>
+      <%if video.upload%>
+      <%= video_tag video.upload.url, controls: true, style: "max-width: 100%;" %>
+      <%else%>
        <div class="flex-video">
         <iframe src="<%=video.url%>" frameborder="0" allowfullscreen></iframe>
-        </div>
+       </div>
+      <%end%>
+
       <% if session[:admin] %>
       <li><%= link_to 'Delete Video', video, method: :delete, data: { confirm: 'Delete This Video?' }, class:"button round small" %></li>
       <%end%>
