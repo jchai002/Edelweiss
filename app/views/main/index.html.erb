@@ -1,17 +1,31 @@
 <ul class="no-bullet">
     <% @announcements.each do |announcement| %>
     <div class="row">
+    
+    <div class="small-12 columns">
+      <li><h2 class="home-text"><%= announcement.title%></h2></li>
+      <li><h5 class="home-text"><%= announcement.updated_at.strftime('%v')%></h5></li>
+      <br>
+      <li class="home-text"><%= simple_format(announcement.body)%></li>
+
+    <% if announcement.video %>
     <div class="small-12 large-6 columns">
-    <li><%= video_tag announcement.video.url(:medium), controls: true, style: "max-width: 100%;" %></li>
+    <li><%= video_tag announcement.video.url, controls: true, style: "max-width: 100%;" %></li>
+    </div>
+    <%end%>
+
+    <% if announcement.picture%>
+    <div class="small-12 large-6 columns">
     <li><%= image_tag(announcement.picture.url)%></li>
     </div>
-    <div class="small-12 large-6 columns lyric">
-      <li><h2><%= announcement.title%></h2></li>
-      <li><h5><%= announcement.updated_at.strftime('%v')%></h5></li>
-      <br>
-      <li><%= simple_format(announcement.body)%></li>
+    <%end%>
+
     </div>
-    <div class="small-12 columns">
+
+ 
+   
+    </div>
+   
     <br>
       <% if session[:admin] %>
       <li><%= link_to 'Edit announcement', edit_announcement_path(announcement), :class=>'small round button' %></li>

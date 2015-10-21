@@ -5,6 +5,8 @@
     <%=f.text_field :title, label: false, placeholder:@announcement.title%>
     <%= f.label "Upload Picture:" %>
     <%=f.file_field :picture%>
+    <%= f.label "Upload Video:" %>
+     <%=f.file_field :video%>
     <%=f.text_area :body, cols: 40, rows: 15, label: false, placeholder:@announcement.body%>
     <%= f.submit 'Edit Announcement', :class => 'tiny button round' %>
 <% end %>
