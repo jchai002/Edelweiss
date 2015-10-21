@@ -40,7 +40,7 @@ private
 
 	# Never trust parameters from the scary internet, only allow the white list through.
 	def announcement_params
-	  params.require(:announcement).permit(:title,:body,:picture)
+	  params.require(:announcement).permit(:title,:body,:picture,:video)
 	end
 
 end
